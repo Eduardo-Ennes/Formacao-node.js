@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Passages</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Exercicio de revisão de CRUD.</h1>
+            <ul>
+                <li><a href="/passage">Adicionar novos destinos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h3>Destinos para viagens</h3>
+    <table>
+        <thead>
+            <th>Id</th>
+            <th>Country</th>
+            <th>City</th>
+            <th>Company</th>
+            <th>Price</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            <% passages.forEach(passage => { %>
+                <tr>
+                    <td class="td-id"><a href="#"><%= passage.id %></a></td>
+                    <td class="td-country"><a href="#"><%= passage.country %></a></td>
+                    <td><%= passage.city %></td>
+                    <td><%= passage.company %></td>
+                    <td>R$<%= passage.price %></td>
+                    <td>
+                        <div class="div-action">
+                            <form action="/passage/up/<%= passage.id %>">
+                                <button class="btn-edit">Edit</button>
+                            </form>
+                            <form action="/passage/delete/<%= passage.id %>" method="POST"
+                            onsubmit="seguranca(event, this)">
+                                <!-- O this serve para armazenar todas as informações de onde ele foi declarado, no caso aqui ele está contendo as informações do formulario -->
+                                <!-- <input type="hidden" name="id" value="passage.id"> -->
+                                <button class="btn-delete">Deletar</button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    axios.get('http://localhost:8080/passages').then(response => {
+        console.log(response)
+    }).catch(error => {
+        console.log(error)
+    })
+</script>
+<script>
+    function seguranca(event, form){
+        event.preventDefault()
+        var decision = confirm('Realmente quer deletar este destino?') 
+        if(decision){
+            form.submit()
+        }
+    }
+</script>
+</html>

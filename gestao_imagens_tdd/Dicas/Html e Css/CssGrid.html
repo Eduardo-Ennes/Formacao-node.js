@@ -1,0 +1,48 @@
+
+
+Css Grid:
+    grid-template-columns: ; --> para colunas 
+    grid-template-rows: ; --> para linhas 
+    row-gap: ; --> margin nas linhas 
+    column-gap: ; --> margin nas colunas 
+
+    Unidade de medida é o: "fr"
+        - quando usamos a unidade de medida "fr" os containeres se distribuem proporcionalmente com os valores distribuidos
+
+    posicionamento do container:
+        Essa é a sequencia!
+        grid-row-start: ; --> qual linha começa
+        grid-column-start: ; --> qual coluna começa
+        grid-row-end: ; --> qual linha termina
+        grid-column-end: ; --> qual coluna termina 
+        grid-area: ; --> atalho, seguindo esta mesma sequencia
+        grid-auto-rows: minmax(); --> para definirmos um tamanho de linha minima e maxima, há outras opções tambem
+        grid-auto-column: minmax(); --> para definirmos um tamanho de coluna minima e maxima, há outras opções tambem
+
+
+    atributos:
+        auto-fit --> os containers se adaptam aos espaços que sobram
+        auto-fill --> sobra espaço
+
+        grid-template-areas: 
+        <!-- 
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: 75px 50px 1fr 50px; 
+
+        grid-template-areas:
+                "header header      header"
+                "nav    nav         ."
+                "main   main        aside"
+                "footer footer      aside"; 
+        -->
+
+        ATALHO para grid grid-template-areas: 
+
+        <!-- 
+            grid-template:
+                "header header header" 75px
+                "nav nav ." 50px
+                "main main aside" 1fr
+                "footer footer aside" 50px
+                / 1fr 1fr 1fr;
+        -->

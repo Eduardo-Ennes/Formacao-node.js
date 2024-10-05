@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Perguntas e respostas</title>
+</head>
+<body>
+    <h1>Ola, Mundo!</h1>
+    <h1>Hello, World</h1>
+    <h3>Nome: <%= nome %></h3>
+    <h3>Profissão: <%= profissao %></h3>
+    <h3><%= empresa %></h3>
+    <% if(exibir){ %>
+        <p>Mensagem verdadeira</p>
+    <% } else{ %>
+        <p>A mensagem foi exibida</p>
+    <% } %>
+    
+    <% paises.forEach(function(pais){ %>
+    <p>Pais: <%= pais.pais %> - Continente: <%= pais.cont %></p>
+    <% }) %>
+</body>
+</html>

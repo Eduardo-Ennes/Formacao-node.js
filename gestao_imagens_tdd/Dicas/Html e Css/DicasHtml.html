@@ -1,0 +1,218 @@
+
+    HTML: 
+
+ SITE PARA ICONE: https://favicon.io/favicon-generator/
+ SITE PARA EMOJIS: https://emojipedia.org/flags
+ SITE PARA IMAGENS E VIDEOS: https://www.pexels.com/pt-br
+ SITE PARA PALETAS DE CORES: https://color.adobe.com/, https://coolors.com, https://paletton.com/
+ SITE PARA FONTES: https://www.fonts.google.com
+ SITE PARA FONTES DOWNLOAD: https://www.dafont.com/pt/
+ SITE PARA AJUDAR A PLANEJAR O SITE: mockflow.com
+ SITE DE GERADOR DE QR-CODE: https://www.qr-code-generator.com/
+ SITE PARA ICONES: https://fonts.google.com/icons
+ SITE DE AUXILIO DE COMO USAR FONTS: https://css-tricks.com/snippets/css/using-font-face-in-css/
+ clip-path --> buscar no google para trazer personalizado
+ 
+ SITE PARA BAIXAR EXTENÇÕES DO GOOGLE: CHROME WEB GOOGLE
+ Extenções baixadas no google: 
+ - ColorZilla: para identificar cores 
+ - FontNinja: para identificar fontes 
+ - Window Reizer: mostra o tamnho da tela 
+
+
+! sandbox="sandbox" ! --> Proteção maxima para os "iframes"
+
+
+principais formas de formatação: 
+<strong> negrito <strong>
+<em> emfase <em>
+<i>italico</i>
+<address> Endereço <address>
+<hr> Linha Horizontal aleatoria
+<br> Quebra de Linha 
+<mark> Marca texto <mark>
+<del> Texto excluido </del>
+<ins>texto inserido</ins>
+<ins> Texto incluido </ins> -> Sublinhado
+<sub> ex: 2² </sub>
+<sup> inverso do sub </sup>
+<code> quando formos escrever um treixo de codigo para exibir no html escrevemos nessa tag </code>
+<dfn><abbr> Quando passa o mouse em cima de uma palavra e mostar um conteudo </abbr> definição</dfn>
+<blockquote>
+    É uma citação longa
+    <p>O ruim não é ter trabalho. O ruim é ter de trabalhar</p>
+    <cite>Seu Madruga</cite>
+</blockquote>
+<q>pequena citação</q>
+<pre>Se escreve texto sem formatação</pre>
+<kbd>colocar teclas do teclado no html, e devemos exportar o css do kbd </kbd>
+<!-------------------------------------------------------------------------------->
+<time datetime="data ou horario">data ou horario</time>
+<!-- pode-se datas, horarios e com fuso horarios, para melhor entendimento no exe_MyComponents -->
+<!-------------------------------------------------------------------------------->
+
+<!-- Incorporação de elementos -->
+<img src="" alt=""> Para colocar imagem 
+<audio src="">Para colocar audio</audio>
+    atributor:
+        controls: para mostrar os controles na tela
+        autoplay: começa a funcionar automaicamente
+        loop: quando termina ele volta ao começo
+        muted: começa no mudo
+<video src="">para incorporção de videos</video>
+    atributos:
+        controls: para mostrar os controles na tela
+        autoplay: começa a funcionar automaicamente
+        loop: quando termina ele volta ao começo
+        muted: começa no mudo
+
+
+<!-------------------------------------------------------------------------------->
+Tags de organização do corpo do site:
+<header tag-semanatica>Cabeçalho</header>
+<main tag-semanatica> Corpo do conteudo </main>
+<article tag-semanatica>Aqui se coloca conteudos importantes do site, nesse caso a <nav> fica dentro do bloco</article>
+<footer tag-semanatica>Rodapé do site, como se fosse o final dele</footer>
+<section tag-semanatica>é importante para agrupar conteudos, caso queiramos criara tres header, main e footer por exemplo, os colocamos dentro de uma section.</section>
+<aside tag-semanatica>Coloca-se conteudo a parte do site, assuntos que desviam do proposito do site, como proganda por exemplo</aside>
+<nav tag-não-semanatica>Utilizado apenas para a organização do conteudo, não tem relevancia semanaticq</nav>
+
+
+
+Link:
+<a href="Aqui se coloca o link" target="_blank"> Palvra ou Texto que irá levar atá a pagina</a>
+../ -> para procurar a pagina na pasta anterior
+./ -> A propria pagina 
+
+
+
+Listas: 
+<li> Usado para colocar algo na lista </li>
+<ol type="1"> Listas Ordenadas </ol> -> em ordem, type e para escolher o tipo da númeração
+<ul> Lista não ordenada </ul>
+<dl> Lista de definição </dl>
+
+
+
+Formulário:
+<form action="url onde os dados serão enviados" method="Post ou get">
+    <fieldset> <!-- usado para agrupas e organizar o conteudo -->
+        <legend>titulo do da finalidade das caixas dentro do agrupamento</legend>
+
+        <label for="unico">Titulo da caixa do input </label>
+        <input id="mes nome do for do label, para vincular ambos" name="usado pelo servidor para identificar os campos no envio do formulário. também pode-se não colocar"> <!-- Uma caixa para entrada de dados -->
+    </fieldset>
+</form>
+
+<datalist>consultar na 19_formularios, form.html</datalist>
+<select>consultar na 19_formularios, form.html</select>
+
+<textarea name="msg" cols="50" rows="8" maxlength="255"></textarea>
+
+input: 
+type="text" --> para entrada de texto
+type="number" --> aceita apenas números
+type="submit" value="" --> Um botão de enviar os dados (um bottom)
+type="reset" --> limpa as caixas (um bottom)
+type="password" --> Usado para senhas
+type="email" --> usado para email 
+type="tel" --> usado para telefone 
+type="url" --> usado para endereços de url 
+type="search" --> usado para fazer buscas
+type="date" --> usado para datas
+type="time" --> usado para horas
+type="file" method="post" --> para anexar documentos
+type="range" min="0" max="10" step=".5" --> como se fosse uma barra da avaliação
+type="checkbox" name="" value="" --> funciona igual ao "radio", porém pode-se escolher mais de uma opção
+(   
+    type="radio"
+    <input type="radio" name="sla">Sim
+    <input type="radio" name="sla">Não
+    <!-- este tipo de input deve-se marcar apenas uma opção, então devemos colocar o name com nomes iguais para que o browser saiba que são do mesmo grupo -->
+)
+
+
+atributos: 
+target="_blank" --> faz com que o resultado seja aberto em uma nova aba
+required --> faz com que o campo seja obrigatorio a ser preenchido 
+autofocus --> assim que a pagina é aberta, não precisa clicar no campo para digitar, ja estatrá habilitada
+max="num" --> número maximo ou data maxima (usado em type="number" e type="date")
+min="num" --> número minimo ou data minima (usado em type="number" e type="date")
+max-length="num" --> maximo de caracteres no input 
+min-length="num" --> minimo de caracteres no input 
+readonly --> desabilita a caxia e o usuario não conseguirá digitar 
+disabled --> deixa o elemento desabilitado 
+checked --> ja fica habilitado por padrão
+placeholder --> é um valor que já estará na caixa como dica do que o usuario deve digitar na caixa 
+contenteditable --> podemos editar determinado elemento diretamente na página
+autocomplete="on ou off" --> sugestões de preencher os campos com dados já digitados
+
+
+tipo de entradas de dados: 
+
+formulário ----------------------------------------------------------
+
+
+
+Meter: (funciona como se fosse um termometro ou medidor)
+    <label for="combustivel">Nível do combustível</label>
+    <meter id="combustivel" min="0" max="100" low="30" high="90" value="25" optimum="95"></meter>
+
+Progress: (Funciona como um medidor de progresso)
+    <label>porcentagem da tarefa
+        <progress max="100" value="70"> 70% </progress>
+    </label>
+
+
+
+Tabela:
+    <table> 
+        <caption> Titulo da tabela </caption>
+        <thead> <!-- cabeçalho da tabela  -->
+            <tr> <!-- Sempre deve-se ter esta tag -->
+                <th>Área</th> <!-- Titulos da coluna -->
+            </tr>
+        </thead>    
+
+        <tbody> <!-- Corpo da tabela -->
+            <tr> <!-- Sempre deve-se ter esta tag -->
+                <td>Desing</td> <!-- Dados da tabela -->
+            </tr>
+        </tbody>
+
+        <tfoot> <!-- footer da tabela -->
+            <tr> <!-- Sempre deve-se ter esta tag -->
+                <td></td> <!-- conteudo do footer -->
+            </tr>
+        </tfoot>
+    </table>
+colspan="num" --> duplica ou mescla em linha
+rowspan="num" --> duplica ou mescla em coluna 
+
+
+
+<details open> <!-- uma lista escondida --> <!-- opren é um seletor -->
+    <summary>Pré-requisitos</summary> <!-- seria o titulo da linha -->
+    <p>Para fazer esse curso é necessário conhecimento de Sistema operacional</p>
+        <!-- elementos contidos na linha -->
+</details>
+
+
+
+Imagens, audio e videos colsultar na:
+--> aula 10:
+--> Conteudo mais avançado. 
+Tipos de imagem:
+    .jpg / .jpeg --> ptmeg de baixa resolução
+    .png --> parecida com a .jpg, porem possui uma transparencia mais sutil
+    .gif --> imagem leve, porem melhor utilizado quando se possui poucas cores
+    .svg --> imagens vetorias, por calculos matematicos, não perdem a resolução
+    .webp --> são formatos superiores, taxa de compreeção e maior (muito pouco utilizado ainda)
+    .avif --> são formatos superiores, taxa de compreeção e maior (muito pouco utilizado ainda)
+
+
+    
+ESPECIAIS: 
+&lt;tag&gt; -> Para mostrar a tag na web 
+& -> para colocar simbolos 
+&#xcodigodoemoji -> para colocar um emoji

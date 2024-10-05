@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Criar destinos</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Exercicio de revisão de CRUD.</h1>
+            <ul>
+                <li><a href="/passages">Voltar a pagina principal</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h3>Destinos para viagens</h3>
+    <form action="/passage/<%=passage.id%>" method="POST" class="form-contein">
+        <input type="text" placeholder="<%=passage.country%>" name="country" autocomplete="off" required> 
+        <input type="text" placeholder="<%=passage.city%>" name="city" autocomplete="off" required>
+        <input type="text" placeholder="<%=passage.company%>" name="company" autocomplete="off" required>
+        <input type="number" placeholder="<%=passage.price%>" name="price" autocomplete="off" required>
+        <button type="submit" class="btn-edit">Update</button>
+    </form>
+</body>
+</html>

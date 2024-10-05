@@ -1,0 +1,248 @@
+
+    CSS: 
+ 
+weight = peso
+right = direita
+lefth = esquerda  
+line-height --> Tamanho do espaçamento entre linhas 
+data-wow-delay="tempo" -> controle do tempo para o elemento aparecer na tela
+letter-spacing: ; --> espaçamento entre as letras
+
+
+Mídia query:
+Mídia type(
+media="screen" -> css para a tela
+media="print" -> css para impressão)
+media="all" -> para todos os dispositivos
+
+
+Altura e Largura:
+height: ; --> altura
+width: : --> largura
+width: fit-content; --> Adapta a largura da caixa com o conteudo contido nela.
+width: min-content; --> Largura da maior palavra contida na caixa
+width: max-content; --> Maior largura possivel dependendo do conteudo contido nela
+min-width: ; --> Largura minima
+max-width: ; Largura maxima 
+
+
+text: 
+text-align: ; --> alinhamento Horizontal
+vertical-align: top; --> alinhamento vertical 
+text-decorantion --> usado para formartar os texto como(sublinhado e entre outros.)
+text-indent: --> Cria uma identação (Igual o espaço que há nos paragrafos)
+text-shadow: --> funciona da mesma forma do que a box-shadow, porem, este serve para textos 
+text-transform: ; --> da estilo a um texto colocando em maiusculas ou minusculas.
+
+
+backgrounds: 
+background-color = colocar uma cor no fundo do site 
+background-image: linear-gradient(); --> para fazer degrade
+background-image: url(''); --> para colocar uma imagem 
+background-position: ; --> Define o local de posicionamento na pagina 
+    --> background-position: 1°right/left 2°bottom/top;
+background-repeat: no-repeat; --> não deixa a imagem se repetir
+background-size: ; --> Para definir o tamanho da imagem, "Cover" fixa a imagem na tela inteira
+background-attachment: fixed; --> fixa a imagem 100% no corpo, mesmo que o conteudo seja maior do que a tela
+background: 1°Color 2°Image 3°Position 4°Repeat 5°Attachment;
+atalho: 
+background-size: cover;
+background: 1°Color:white 2°Image:url('definir') 3°Position:definir 4°Repeat:no-repeat 5°Attachment:fixed 6°size:cover ;
+background-blend-mode: ; --> aqui temos varias opções para mesclar e trabalhar com as cores, olha na documentação de com usar
+background-clip: ; --> forma de mexer no tamanho background
+
+Object-fit: 
+object-fit: ; --> Funciona da mesma forma que o background, porem é para se tabalhar com tags <img>, se usa em responsividade
+
+Filter:
+filter: ; --> aqui temos varias propriedades para manipular imagens e cores, como desfoca-la por exemplo
+
+Boder: 
+Border: 1°Width 2°style 3°Color --> para personalizar as bordas de uma caixa
+border-image: 1°url('NomeDaFoto') 2°width 3°type(repeat); --> para usar bordas com imagens, muito pouco usado, porem, para que ela funciona deve-se ter uma "Border" primeiro. ex de Border está logo acima.
+border-collapse: collapse; --> Cola as caixas uma do lado da outra.
+border-radius: --> arredonda as pontas 
+
+
+Outline:
+outline: 1°largura 2°Tipo 3°Cor
+outline-offset: ; --> distacia a borda do elemento
+
+
+Boxshadow:
+box-shadow: 1°direira 2°embaixo 3°sombreado = Cria sombra no objeto
+box-sizing: border-box; -> ???
+box-sizing: clamp(tamMin, TamIdeal ,TamMax); --> aqui podemos colocar um tamanho minimo ideal e maximo nas caixas
+
+
+Margin:
+margin: auto; --> Centraliza o conteudo independende do seu tamanho, porem, a margem é para criar distancia do conteudo de fora
+
+
+Padding:
+(/* padding --> distancia a borda das letras */  
+padding-top: --> parte de cima 
+padding-right: -- parte da direita
+padding-bottom: --> parte de baixo
+padding-left: --> parte da esquerda
+padding: --> executa todos os lados juntos, se for valores diferentes seguir a sequencia acima) 
+
+
+fontes:
+font --> engloba todos de uma forma simplificada.    (logica logo abaixo:) 
+font: 1°font-style 2°font-weight 3°font-size 4°font-family;
+1° font-style --> pode colocar as letras em italico por exemplo 
+2° font-weight --> define o peso da letra (lighter, normal, bold or bolder )
+3° font-size --> estabelece o tamanho da fonte 
+font-size: 4vw; --> usando o "vw" e "vh" as letras ficam com tamanhos responsivos 
+4° font-family --> Define o tipo das letras
+! podem ser usadas separadamente, porem, a "font" engloba todas, so deve-se conhecer a ordem certinha.
+font-variant: ; --> algumas opções para colocar estilos a um texto.
+
+
+overflow:
+overflow: hidden; --> Não permite que o conteudo transborde da caixa, será basicamente escondido, depois deverá criar uma barra de rolagem para observa-lo
+overflow: scroll; --> cria ambas barras de rolagem, horizontal e vertical
+overflow: auto; --> Mostra apenas a barra de rolagem necessaria
+overflow-x: scroll; --> trabalha de forma individual na vertical
+overflow-y: scroll; --> trabalha de forma individual na horizonatl
+
+
+Poisition:
+position: Relative; --> Deve-se colocar este valor na caixa que irá interagir com a caixa position: Absolut;
+position: Absolut; --> Quando se coloca este metodo a caixa irá se realacionar coma caixa que possue o valor position: Relative; mais proxima, caso nenhuma caixa tenha "Relative" a caixa irá interagir com a viewport
+position: fixed; --> A caixa sempre vai se relacionar com a viewport
+position: sticky; --> faz com que a sua caixa não suma, ela cola no topo ou em baixo da caixa que está contida
+Para posicionar as caixas podemos usar:
+left: ;
+right: ;
+top: ;
+bottom: ;
+
+
+Display: 
+display: block; --> Transforma um elemento em caixa(bloco)
+display: inline; --> Transforma um elemento em linha 
+display: inline-block; --> Será aplicado o elemento os dois tipos, em linha e caixa(bloco)
+display: none --> Remove ou esconde o elemento.
+
+
+visibility:
+visibility: hidden; --> remove o elemento, preservando o seu espaço.
+
+
+Transition: 
+transition-property: ; --> nome da propriedade em que a ação vai acontecer, ex: width
+transition-duration --> contrala o tempo para uma determinada ação disparar
+transition-timing-function: ; --> Opções de personalizar a forma de inteação
+transition-timing-function: cubic-bezier(.59, -0.3, .49, 1.36); --> forma de personaliza a interação, buscar saber mais 
+transition-delay: 0, .9s; --> Como se fosse um sleep, demora um pouco para a ação disparar 
+transition: 1°- property 2°- duration 3°- function 4°- delay; --> Atalho
+
+
+transform: (2D)
+transform: translate(x , y) ; --> movimenta um elemento no eixo (x , y)
+transform: rotate() ; --> rotacionar um elemento (num com deg)
+transform: skew(x, y) ; --> distorcer um elemento no eixo (num com deg)
+transform: scale(x , y) ; --> escalar um elemento (aumentar ou diminuir) 
+transform-origin: ; --> aqui voce pode redefinir os eixos
+
+
+/* ------------------------------------------------------------------- */
+aspect-radio: 16 / 9; --> este foi usado para deixar um video responsivo
+vertical-align: middle; --> serve para definir o alinhamento vertical de uma caixa inline, inline-block ou table-cell. 
+
+
+
+
+List: (ul - lista não ordenada e ol - lista ordenada)
+list-style-image: ; --> 
+list-style-position: ; --> posições da <li> na lista
+list-style-type: ; --> estilo da lista (ul)
+list-style: ; --> estilo da lista (ol)
+columns --> divide a lista em partes 
+
+
+cursor:
+cursor: ; --> aqui temos varias opções para colocarmos no cursor
+point-events: none; --> que o elemento não recebera nenhum movimento de clique 
+
+
+
+Pseudo-Classes: --> Pode-se usar mais de uma pseudo-classe em um elemento ao mesmo tempo.
+:Hover --> quando o mouse esta em cima do elemento
+:focus --> quando o foco é o elemento
+:valid --> elementos que estão em conformidade com o preenchimento dos dados
+:invalid --> representa qualquer elemento <input> ou <form> cujo conteúdo não esteja válido.
+:visited --> quando o objeto foi visitado
+:actived --> quando clica no objeto
+:link --> 
+:root{} --> local para declarar variaveis, exemplo no CSS do projeto Android modulo 02 
+:nth-child(2n) --> Efeito zebrado em tabelas
+:checked --> quando algo está ligado ou marcado. usado em type='checkbox'
+:disable --> representa qualquer elemento desativado
+:first --> primeiro elemento
+:first-child --> representa qualquer elemento que seja o primeiro filho de seus pais.
+:first-of-type --> representa o primeiro elemento de seu tipo entre os filhos de seu elemento pai.
+:last-child --> representa qualquer elemento que é o último filho de seu elemento pai.
+:last-of-type --> representa o último irmão com o nome de elemento dado na lista de filhos de seu elemento pai.
+:required --> de campo obrigatório
+:read-write --> leitura e escrita 
+:read-only --> apenas leitura
+:has(elemento) --> não sei explicar
+
+
+Pseudo-Elementos: --> consegue inserir conteudos no html
+::after --> depois
+::before --> antes
+::fist-letter --> primeira letra
+::firts-line --> primeira linha 
+::selection 
+::placeholder
+::-webkit-scrollbar{ 
+    height: 0px;
+    width: 0px;
+} --> esconde a barra de rolagem
+
+
+@: 
+@charset --> para colocar nos padrões de linguagem.
+@font-face --> Permite o controle sobre recursos tipográficos avançados em fontes OpenType. "exemplos: no modulo 2 aula de tipografias e na CSS do projeto Android". 
+
+
+Simbolos:
+# = id
+. = class 
+: = Pseudo-Classes 
+:: = Pseudo-Elementos 
+> = children
+/----------------------------------------------------/
+
+
+
+(Não se usa muito hoje, em poucos casos como o da imagem:
+Float: 
+float: right, left ou none; -> Para a posição de um elemento, (na sessão imagens usamos um float em uma imagem com texto, o texto se adapta a imagem: um exemplo para ser seguido). Porem, possui alguns efeitos colaterais que dão errado e para posicionar terá que fazer com outro metodo
+
+Clear:
+clear: right, left ou both; )
+
+
+/----------------------------------------------------/
+Aqui temos um exemplo de como  criar um contador 
+
+section{
+    counter-reset: contador;
+    <!-- Aqui criamos a variavel -->
+}
+
+.cores{
+    counter-increment: contador;
+    <!-- Aqui incrementamos sempre +1 quando .cores for encontrado -->
+}
+
+.cores::before{
+    content: counter(contador);
+}
+
+
